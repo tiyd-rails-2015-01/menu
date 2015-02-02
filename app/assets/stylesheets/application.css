@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+body{
+   text-align:center;
+   color: white;
+   background-color: blue;
+   font-family: 'Special Elite',sans;
+ }
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: saddlebrown;
+    padding: 1em;
+    border-radius: 2em;
+    margin-top: 2em;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  width: 10em;
+  border-radius: 5em;
+}

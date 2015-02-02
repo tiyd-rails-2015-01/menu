@@ -22,6 +22,18 @@ class Category < ActiveRecord::Base
     return description
   end
 
+  def self.get_image_at_key( key_value )
+    image = ""
+
+    self.all.each do |i|
+      if i.id == key_value
+        image = i.image
+      end
+    end
+
+    return image
+  end
+
   def self.get_description_key_pairs
     pairs = []
 

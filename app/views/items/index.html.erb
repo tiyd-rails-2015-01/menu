@@ -1,64 +1,36 @@
+
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 <p id="notice"><%= notice %></p>
 
-<h1>Items</h1>
+<div>
+<h1>Cookiesplosion</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th>Category_key</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @number_of_categories.times do |i| %>
-    <tr><td><%= Category.get_description_at_key( i+1 ) %></td></tr>
-      <% @items.each do |item| %>
-        <% if item.category_key == (i+1) %>
-          <tr>
-              <td><%= item.image %></td>
-              <td><%= item.price %></td>
-              <td><%= item.description %></td>
-              <td><%= item.category_key %></td>
-              <td><%= link_to 'Show', item %></td>
-              <td><%= link_to 'Edit', edit_item_path(item) %></td>
-              <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+<div>
+  <table>
+    <tbody>
+      <% @number_of_categories.times do |i| %>
+      <tr>
+        <td><%= Category.get_description_at_key( i+1 ) %></td>
+        <td> <%= image_tag Category.get_image_at_key( i+1 ) %></td>
+      </tr>
+        <% @items.each do |item| %>
+          <% if item.category_key == (i+1) %>
+            <tr>
+                <!-- <td><%= item.image %></td> -->
+                <td><%= item.description %></td>
+                <td><%= item.price %></td>
+                <!-- <td><%= item.category_key %></td> -->
+                <td><%= link_to 'Show', item %></td>
+                <td><%= link_to 'Edit', edit_item_path(item) %></td>
+                <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
         <% end %>
       <% end %>
-    <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 
 <br>
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @category_list.each do |category| %>
-      <tr>
-        <td><%= category.image %></td>
-        <td><%= category.description %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-Description id pairs
-<%= @description_id_pairs %>
-<!-- <%= image_tag "cookiestorm.png" %>
-<%= image_tag  "more_cookies.jpg" %>
-<%= image_tag "cookiemonster.jpg" %> -->
-
 <%= link_to 'New Item', new_item_path %>
-<br><br>
-<%= link_to 'Dashboard', root_path %>
