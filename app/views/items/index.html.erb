@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item name</th>
+      <th>Item description</th>
+      <th>Item price</th>
+      <th>Category ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.description %></td>
+        <td><%= item.price %></td>
+        <td><%= item.category.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
