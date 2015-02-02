@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get 'courses/home'
 
+  get 'courses/index'
+
+  get 'items/index'
 
 
 
