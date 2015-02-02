@@ -1,5 +1,3 @@
-<h1>Stuff!</h1>
-
 <p id="notice"><%= notice %></p>
 
 <h1>Items</h1>
@@ -16,16 +14,21 @@
   </thead>
 
   <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.image %></td>
-        <td><%= item.price %></td>
-        <td><%= item.description %></td>
-        <td><%= item.category_key %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% @number_of_categories.times do |i| %>
+    <tr><td><%= Category.get_description_at_key( i+1 ) %></td></tr>
+      <% @items.each do |item| %>
+        <% if item.category_key == (i+1) %>
+          <tr>
+              <td><%= item.image %></td>
+              <td><%= item.price %></td>
+              <td><%= item.description %></td>
+              <td><%= item.category_key %></td>
+              <td><%= link_to 'Show', item %></td>
+              <td><%= link_to 'Edit', edit_item_path(item) %></td>
+              <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      <% end %>
     <% end %>
   </tbody>
 </table>

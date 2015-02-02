@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
 
     @description_at_one = Category.get_description_at_key( 1 )
     @description_id_pairs = Category.get_description_key_pairs
+    @number_of_categories = @description_id_pairs.length
   end
 
   # GET /item/new
