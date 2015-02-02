@@ -1,0 +1,19 @@
+<h1>Show Item</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @item.price %>
+</p>
+
+<%= link_to '<button type="button">Edit</button>' .html_safe, edit_item_path(@item) %>
+<%= link_to '<button type="button">Items Home</button>' .html_safe, items_path %>
