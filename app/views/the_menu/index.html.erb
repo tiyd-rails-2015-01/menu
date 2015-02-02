@@ -1,0 +1,12 @@
+<h1>Menu#index</h1>
+
+<tbody>
+    <% @categorys.each do |category| %>
+      <tr>
+        <td><%= category.name %></td><br>
+        <td>
+      </tr>
+    <% end %>
+  </tbody>
+
+<%= link_to 'Modify menu', foods_path %>
