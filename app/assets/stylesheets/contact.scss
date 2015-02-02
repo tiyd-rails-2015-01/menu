@@ -1,3 +1,46 @@
 // Place all the styles related to the Contact controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+body {
+  margin-top:40px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  color:#222;
+  text-align:center;
+}
+
+a {
+  border-left:  1px solid;
+  padding: 2px;
+  text-decoration: none;
+  color:#000;
+  font-size: .75em;
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -webkit-animation-fill-mode:forwards;
+  -webkit-animation-duration:2s;
+  -webkit-animation-delay: 1.2s;
+  &:hover {
+    color:#888
+  }
+}
+
+ul  {
+  list-style-type:none;
+  padding-left:0;
+}
+
+.title  {
+  margin-top:100px;
+  a{
+    font-size: 1.5em;
+  }
+}
+table {
+  text-align:left;
+  margin:0 auto;
+}
+td {
+  padding-right: 10px;
+}

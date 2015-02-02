@@ -31,8 +31,8 @@ a {
   opacity:0;
   -webkit-animation:fadeIn ease-in 1;
   -webkit-animation-fill-mode:forwards;
-  -webkit-animation-duration:1s;
-  -webkit-animation-delay: 0.7s;
+  -webkit-animation-duration:2s;
+  -webkit-animation-delay: 1.2s;
 }
 
 ul  {

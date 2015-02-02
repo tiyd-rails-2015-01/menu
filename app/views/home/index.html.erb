@@ -1,7 +1,9 @@
-<div>
-  <%= image_tag("title.png", width: 200) %>
+<div class="title">
+  <div>
+    <%= image_tag("title.png", width: 500) %>
+  </div>
+  <p>
+    <%= link_to 'Menu', the_menu_index_path %>
+    <%= link_to 'Contact', contact_index_path %>
+  </p>
 </div>
-<p>
-  <%= link_to 'Menu', the_menu_index_path %>
-  <%= link_to 'Contact', contact_index_path %>
-</p>
