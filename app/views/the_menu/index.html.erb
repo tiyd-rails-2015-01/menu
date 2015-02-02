@@ -1,12 +1,22 @@
-<h1>Menu#index</h1>
-
-<tbody>
+  <tbody>
     <% @categorys.each do |category| %>
       <tr>
-        <td><%= category.name %></td><br>
-        <td>
+        <td><%= image_tag("#{category.name.downcase}.png", height:35 )%><br>
+          <ul>
+            <% category.foods.each do |food| %>
+              <li>
+                <%=food.name %><br>
+                <%=food.description %>
+                <%=food.price %><br>
+              </li>
+            <% end %>
+          </ul>
+        </td>
       </tr>
     <% end %>
   </tbody>
 
-<%= link_to 'Modify menu', foods_path %>
+<p>
+  <%= link_to 'Modify menu', foods_path %>
+  <%= link_to 'Home', root_path %>
+</p>

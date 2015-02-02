@@ -1,9 +1,9 @@
 class FoodsController < ApplicationController
 before_action :set_food, only: [:edit, :update, :destroy]
+before_action :category_list
   def new
     @food = Food.new
     @category = Category.new
-    @all_categories = Category.all.map {|c| [c.name, c.id] }  #[["Starters", 1], ["Mains", 2], ["Additions and Desserts",3] ]
   end
 
   def index
@@ -11,7 +11,7 @@ before_action :set_food, only: [:edit, :update, :destroy]
   end
 
   def edit
-    @category = @food.category
+    @category = @food.category_id
   end
 
   def create
@@ -29,7 +29,7 @@ before_action :set_food, only: [:edit, :update, :destroy]
   def update
     respond_to do |format|
       if @food.update(food_params)
-        format.html { redirect_to @food, notice: 'Menu Item was successfully updated.' }
+        format.html { redirect_to foods_path, notice: 'Menu Item was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -39,7 +39,7 @@ before_action :set_food, only: [:edit, :update, :destroy]
   def destroy
     @food.destroy
     respond_to do |format|
-      format.html { redirect_to @food, notice: 'Menu Item was successfully removed.' }
+      format.html { redirect_to foods_path, notice: 'Menu Item was successfully removed.' }
     end
   end
 
@@ -52,4 +52,7 @@ before_action :set_food, only: [:edit, :update, :destroy]
     params.require(:food).permit(:category_id, :name, :description, :price)
   end
 
+  private def category_list
+    @all_categories = Category.all.map {|c| [c.name, c.id] }
+  end
 end
