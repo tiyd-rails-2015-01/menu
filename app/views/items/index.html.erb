@@ -31,6 +31,30 @@
 </table>
 
 <br>
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Description</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @category_list.each do |category| %>
+      <tr>
+        <td><%= category.image %></td>
+        <td><%= category.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+Description id pairs
+<%= @description_id_pairs %>
+<!-- <%= image_tag "cookiestorm.png" %>
+<%= image_tag  "more_cookies.jpg" %>
+<%= image_tag "cookiemonster.jpg" %> -->
 
 <%= link_to 'New Item', new_item_path %>
 <br><br>

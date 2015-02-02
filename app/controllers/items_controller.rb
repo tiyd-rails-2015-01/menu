@@ -7,11 +7,17 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
   #   @total_amount = @weights.reduce(0) {|sum, i| sum + i.weight}
+    @category_list = Category.list_categories
+
+    @description_at_one = Category.get_description_at_key( 1 )
+    @description_id_pairs = Category.get_description_key_pairs
   end
 
   # GET /item/new
   def new
     @item = Item.new
+    @description_id_pairs = Category.get_description_key_pairs
+
   end
 
   # POST /item
