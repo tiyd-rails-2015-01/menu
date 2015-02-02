@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Menu</h1>
+
+
+
+<%@categories.each do |category|%>
+  <h2><%= category.name %></h2>
+  <% category.items.each do |item| %>
+    <p><%= item.name %></p>
+    <p><%= item.description %></p>
+  <%end%>
+<%end%>
