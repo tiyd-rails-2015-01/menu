@@ -1,3 +1,3 @@
 class Item < ActiveRecord::Base
-  belongs_to :sections
+  belongs_to :section
 end
