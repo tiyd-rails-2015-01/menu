@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def index
+    Item.categorize
     @entrees = Category.where(name: "Entree").first.items
     @desserts = Category.where(name: "Dessert").first.items
     @appetizers = Category.where(name: "Appetizers").first.items
@@ -20,12 +21,6 @@ class ItemsController < ApplicationController
     @appetizer=Category.where(name: "Appetizers").first.name
     @dessert=Category.where(name: "Dessert").first.name
 
-    @categories= Category.all
-    #
-    #
-    # @entree_items= entree.items.map &:name
-    # @appetizer_items= appetizer.items.map &:name
-    # @dessert_items= dessert.items.map &:name
   end
 
   def create

@@ -1,10 +1,12 @@
-<h1>Menu</h1>
-
+<h1>Ashley's Bistro</h1>
+<p> Welcome to Ashley's Bistro, world famous for our "Make Your Own Menu"! Please click on
+  meal type image to make a new menu item for that meal </p>
+<h2>Menu</h2>
 <div class="cards container">
 
   <div class="card">
     <div class="card-image">
-      <%= image_tag("appetizer.png", width: 400)%>
+      <%= link_to image_tag("appetizer.png", width: 400), new_item_path(:category_name=> "Appetizers")%>
     </div>
     <div class="card-header">
       <h2> <%= @appetizer%> </h2>
@@ -18,7 +20,7 @@
 
   <div class="card">
     <div class="card-image">
-      <%= image_tag("entree.jpg", width: 400 )%>
+      <%= link_to image_tag("entree.jpg", width: 400 ), new_item_path(:category_name=> "Entree")%>
     </div>
     <div class="card-header">
       <h2> <%= @entree%> </h2>
@@ -32,7 +34,7 @@
 
   <div class="card">
     <div class="card-image">
-      <%= image_tag("dessert.png", width: 400)%>
+      <%= link_to image_tag("dessert.png", width: 400), new_item_path(:category_name=> "Dessert")%>
     </div>
     <div class="card-header">
       <h2> <%= @dessert%> </h2>
