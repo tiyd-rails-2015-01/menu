@@ -1,0 +1,17 @@
+<nav class="fixed-nav-bar">
+  <div class="nav">
+    <span id="home">Menu</span>
+    <%= link_to '<button type="button">Course</button>' .html_safe, course_path %>
+  </div>
+</nav>
+
+<div class="inner-div">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<h1>Editing Course</h1>
+
+<%= render 'form' %>
+
+<%= link_to '<button type="button">Show</button>' .html_safe, @course %>
+<%= link_to '<button type="button">Back</button>' .html_safe, course_path %>
+</div>
