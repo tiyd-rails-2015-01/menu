@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /foods
   # GET /foods.json
@@ -12,6 +12,9 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def show
+    redirect_to edit_item_path(@item)
+  end
   # POST /foods
   # POST /foods.json
   def create
