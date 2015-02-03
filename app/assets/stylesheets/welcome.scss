@@ -19,7 +19,9 @@
   $tab-inactive-color: $base-background-color;
   $tab-inactive-hover-color: silver;
   $tab-mode: $medium-screen;
-
+  $sans-serif: 'Nunito', sans-serif;
+  $sans-serif-2: 'Varela Round', sans-serif;
+  
   @include clearfix;
   line-height: 1.5;
   padding: 0;
@@ -37,6 +39,8 @@
     border-top: $tab-border;
     color: $tab-link-color;
     display: block;
+    font-family: $sans-serif-2;
+    font-size: 1.2em;
     font-weight: 400;
     padding: ($base-spacing / 2) $gutter;
     text-decoration: none;

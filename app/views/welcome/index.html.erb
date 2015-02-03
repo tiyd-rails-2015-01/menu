@@ -1,106 +1,50 @@
-<!-- <h1>The Frolicking Goat Cafe</h1>
-<%= image_tag "frolic.jpg" %>
-<p><%= link_to 'New Item', new_item_path %></p>
-<% if @sections.length != nil %>
-  <% @sections.each do |section| %>
-  <h3><%=section.name%></h3>
-  <%= image_tag section.picture %>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @items.each do |item| %>
-        <% if item.section == section %>
-        <tr>
-          <td><%= link_to item.name, edit_item_path(item.id) %></td>
-          <td><%= item.description %></td>
-          <td><%= number_to_currency(item.price) %></td>
-        </tr>
-        <% end %>
-        <% end %>
-      </tbody>
-    </table>
-  <% end %>
-<% end %>
-
-<ul class="accordion-tabs-minimal">
-  <li class="tab-header-and-content">
-    <a href="#" class="tab-link is-active">Breakfast</a>
-    <div class="tab-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
-    </div>
-  </li>
-  <li class="tab-header-and-content">
-    <a href="#" class="tab-link">Lunch</a>
-    <div class="tab-content">
-      <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
-    </div>
-  </li>
-  <li class="tab-header-and-content">
-    <a href="#" class="tab-link">Dinner</a>
-    <div class="tab-content">
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
-    </div>
-  </li>
-  <li class="tab-header-and-content">
-    <a href="#" class="tab-link">Dessert</a>
-    <div class="tab-content">
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
-    </div>
-  </li>
-  <li class="tab-header-and-content">
-    <a href="#" class="tab-link">Sides</a>
-    <div class="tab-content">
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
-    </div>
-  </li>
-  <li class="tab-header-and-content">
-    <a href="#" class="tab-link">Drinks</a>
-    <div class="tab-content">
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
-    </div>
-  </li>
-</ul> -->
-<h1>The Frolicking Goat Cafe</h1>
-<!-- <%= image_tag "frolic.jpg" %> -->
-<p><%= link_to 'New Item', new_item_path %></p>
-<% if @sections.length != nil %>
-  <ul class="accordion-tabs-minimal">
-    <% @sections.each do |section| %>
-      <li class="tab-header-and-content">
-      <a href="#" class="tab-link"><%=section.name%></a>
-      <div class="tab-content">
-      <%= image_tag section.picture %>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @items.each do |item| %>
-          <% if item.section == section %>
+<article class="type-system-rounded">
+  <h1>The Frolicking Goat Cafe</h1>
+  <!-- <%= image_tag "frolic.jpg" %> -->
+  <p><%= link_to 'New Item', new_item_path %></p>
+  <% if @sections.length != nil %>
+    <ul class="accordion-tabs-minimal">
+      <% @sections.each do |section| %>
+        <li class="tab-header-and-content">
+        <a href="#" class="tab-link"><%=section.name%></a>
+        <div class="tab-content">
+        <%= image_tag section.picture %>
+        <table>
+          <thead>
             <tr>
-              <td><%= link_to item.name, edit_item_path(item.id) %></td>
-              <td><%= item.description %></td>
-              <td><%= number_to_currency(item.price) %></td>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th colspan="3"></th>
             </tr>
+          </thead>
+          <tbody>
+            <% @items.each do |item| %>
+            <% if item.section == section %>
+              <tr>
+                <td><%= link_to item.name, edit_item_path(item.id) %></td>
+                <td><%= item.description %></td>
+                <td><%= number_to_currency(item.price) %></td>
+              </tr>
+            <% end %>
           <% end %>
+          </tbody>
+        </table>
         <% end %>
-        </tbody>
-      </table>
-      <% end %>
-      <% end %>
-    </div>
-  </li>
-</ul>
+        <% end %>
+      </div>
+    </li>
+  </ul>
+
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
