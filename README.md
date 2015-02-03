@@ -6,4 +6,4 @@ This Ruby app creates an online menu for the restaurant Big Cheese. It has three
 
 ## Requirements
 
-To deploy this app, 
+To deploy this app, in theory, go to https://big-cheese.herokuapp.com/
