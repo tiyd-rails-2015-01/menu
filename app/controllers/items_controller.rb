@@ -7,13 +7,10 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-
-    respond_to do |format|
-      if @item.save
-        format.html { redirect_to items_path, notice: 'Item was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @item.save
+      redirect_to items_path, notice: 'Item was successfully created.'
+    else
+      render :new
     end
   end
 
