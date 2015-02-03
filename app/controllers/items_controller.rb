@@ -9,6 +9,8 @@ class ItemsController < ApplicationController
   end
 
   def show
+    redirect_to :action => 'edit'
+
     # @item = Item.find(params[:id])
   end
 
