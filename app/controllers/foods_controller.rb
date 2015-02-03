@@ -44,7 +44,7 @@ before_action :category_list
   end
 
   def food_params
-    params.require(:food).permit(:category_id, :name, :description, :price)
+    params.require(:food).permit(:category_id, :name, :description, :price, :picture)
   end
 
   def category_list
