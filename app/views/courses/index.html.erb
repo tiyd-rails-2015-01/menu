@@ -16,14 +16,18 @@
 
   <tbody>
     <% @courses.each do |course| %>
+
       <tr>
-        <td><%= course.name%> </td>
-        <td><%= link_to '<button type="button">Edit</button>' .html_safe, edit_course_path(course) %></td>
-        <td><%= link_to '<button type="button">Destroy</button>' .html_safe, course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= course.name %> </td>
       </tr>
+      <% course.items.each do |item| %>
+        <td><%= item.name %> </td>
+        <td><%= item.description %> </td>
+        <td><%= item.price %> </td>
+      </tr>
+      <br>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 <br>
-
-</div>

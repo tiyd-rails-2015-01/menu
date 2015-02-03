@@ -3,8 +3,7 @@ class CoursesController < ApplicationController
 
 
   def index
-  @courses = Course.all
-  @items = Item.all
+    @courses = Course.all
   end
 
   # GET /exercises/new
@@ -19,7 +18,7 @@ class CoursesController < ApplicationController
   # POST /exercises
   # POST /exercises.json
   def create
-    @course = Course.new(exercise_params)
+    @course = Course.new(course_params)
 
     respond_to do |format|
       if @course.save
@@ -64,7 +63,7 @@ class CoursesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   private def course_params
-    params.require(:course).permit(:name)
+    params.require(:course).permit(:id, :name)
   end
 
 end
