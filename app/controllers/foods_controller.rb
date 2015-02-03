@@ -3,7 +3,6 @@ class FoodsController < ApplicationController
 
   def index
     @foods = Food.all
-    @categories = Category.all
   end
 
   def show
@@ -11,6 +10,7 @@ class FoodsController < ApplicationController
 
   def new
     @food = Food.new
+    @category = Category.new
   end
 
   def edit

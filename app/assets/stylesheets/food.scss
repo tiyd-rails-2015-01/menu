@@ -1,3 +1,39 @@
 // Place all the styles related to the Food controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+
+  @include radial-gradient(#1e5799, #3dc3d1);
+  @include radial-gradient(#1e5799, #3dc3d1, $fallback: red);
+  @include radial-gradient(circle at 50% 50%, #eee 10%, #1e5799 30%, #efefef);
+}
+
+body {
+  @include border-image(url(/images/border.png) 27 repeat);
+}
+
+button {
+  align: center;
+  @include button(shiny, #ccc);
+}
+
+body {
+  text-align: center;
+
+@include background(linear-gradient(red, green) left repeat);
+@include background(linear-gradient(red, green) left repeat, radial-gradient(red, orange) left repeat);
+@include background(url("/images/a.png"), linear-gradient(red, green), center no-repeat orange scroll);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+td {
+  align: left;
+}
