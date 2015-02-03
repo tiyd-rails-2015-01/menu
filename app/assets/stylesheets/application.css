@@ -16,8 +16,15 @@
 
 body {text-align :center;
       background-color :lightgrey;
+      border-style :groove;
+      border-color :darkgrey;
+      border-size :500px;
 
       }
+
 h1 {:center;
     color :red;
+    }
+
+th {color :blue;
     }
