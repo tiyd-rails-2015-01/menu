@@ -23,6 +23,10 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+      <%= f.label :category_id %><br>
+      <%= f.select :category_id, options_for_select([["Appetizers", 1], "Entrees", "Desserts", "Drinks", "Sides"]), :include_blank=> true %><br>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>
