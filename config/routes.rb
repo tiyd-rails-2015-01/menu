@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'the_menu/index'
 
+  get 'home/index'
+
   resources :foods
   resources :homes
 
