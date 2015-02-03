@@ -1,5 +1,12 @@
 @import "bourbon";
 @import "navigation";
 
+body{
+  background: black;
+  color: #FFEFDB;
+}
 
+.card {
+  color: black;
+}
 @import 'cards';
