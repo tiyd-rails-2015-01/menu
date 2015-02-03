@@ -43,16 +43,17 @@ before_action :category_list
     end
   end
 
+  private
 
-  private def set_food
+  def set_food
     @food = Food.find(params[:id])
   end
 
-  private def food_params
+  def food_params
     params.require(:food).permit(:category_id, :name, :description, :price)
   end
 
-  private def category_list
+  def category_list
     @all_categories = Category.all.map {|c| [c.name, c.id] }
   end
 end
