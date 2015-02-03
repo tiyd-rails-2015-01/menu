@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'item/new'
-
-  get 'item/create'
-
-  get 'item/edit'
-
-  get 'item/update'
-
-  get 'item/index'
+  # get 'item/new'
+  #
+  # get 'item/create'
+  #
+  # get 'item/edit'
+  #
+  # get 'item/update'
+  #
+  # get 'item/index'
+  root 'items#index'
 
 resources :items
   # The priority is based upon order of creation: first created -> highest priority.
