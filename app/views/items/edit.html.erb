@@ -1,10 +1,8 @@
-<body>
-  <h1>Editing Course</h1>
+<h1>Editing Course</h1>
 
 <%= render 'form' %>
 
 
-<%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= button_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' }, :method => "get" %>
 
-<%= link_to 'Home', root_path %>
-</body>
+<%= button_to 'Home', root_path, :method => "get" %>

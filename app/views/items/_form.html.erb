@@ -1,4 +1,4 @@
-<body>
+
   <%= form_for(@item) do |f|%>
 <br>
   <div class="field">
@@ -21,8 +21,8 @@
 <br>
   <div class="field">
     <%= f.label :course_id %><br>
-    <%= f.collection_select :course_id, Course.all, :id, :name %>
     <!-- THIS IS HOW I GET THE ITEM.COURSE.NAME TO REFLECT THE COURSE TYPE -->
+    <%= f.collection_select :course_id, Course.all, :id, :name %>
   </div>
 </br>
 <br>
@@ -31,4 +31,3 @@
   </div>
 </br>
 <% end %>
-</body>

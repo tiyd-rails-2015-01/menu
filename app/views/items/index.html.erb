@@ -1,9 +1,8 @@
-<body>
 <p id="notice"><%= notice %></p>
 
-<h1>Selections</h1>
+<h1>Selections from the house</h1>
 
-<table>
+  <table>
   <thead>
     <tr>
       <th>Course name</th>
@@ -21,25 +20,24 @@
         <td><%= item.name %></td>
         <td><%= item.price %></td>
         <td><%= item.description %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Edit', edit_item_path(item), :method => "get" %></td>
+        <td><%= button_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :method => "get" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<div>
 <br>
-<br>
-<%= link_to 'New item', new_item_path %>
+  <%= button_to 'New item', new_item_path, :method => "get" %>
 </br>
-</br>
-<%= link_to 'Home', root_path %>
-</body>
+  <%= button_to 'Home', root_path, :method => "get" %>
+</div>
   <div>
     <br>
       <h2>"Today's secret ingredient...LOVE!"</h2>
     </br>
-      <br>
-        <%= image_tag "http://static.tvtropes.org/pmwiki/pub/images/ironchef.jpg" %>
-      </br>
   </div>
+      <br>
+      <!-- <%= image_tag "http://static.tvtropes.org/pmwiki/pub/images/ironchef.jpg" %> -->
+      </br>
