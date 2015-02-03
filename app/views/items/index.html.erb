@@ -1,6 +1,6 @@
 
 <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <div>
 <h1>Cookiesplosion</h1>
@@ -18,10 +18,11 @@
           <% if item.category_key == (i+1) %>
             <tr>
                 <!-- <td><%= item.image %></td> -->
+                <td><%= item.name %></td>
                 <td><%= item.description %></td>
-                <td><%= item.price %></td>
+                <td>$<%= item.price %></td>
                 <!-- <td><%= item.category_key %></td> -->
-                <td><%= link_to 'Show', item %></td>
+                <td><%= link_to 'Show', item %></td> -->
                 <td><%= link_to 'Edit', edit_item_path(item) %></td>
                 <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>

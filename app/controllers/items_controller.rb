@@ -22,6 +22,8 @@ class ItemsController < ApplicationController
   # POST /item
   # POST /items.json
   def create
+    @description_id_pairs = Category.get_description_key_pairs
+    
     @item = Item.new(item_params)
 
     respond_to do |format|
@@ -38,6 +40,8 @@ class ItemsController < ApplicationController
   # PATCH/PUT /item/1
   # PATCH/PUT /item/1.json
   def update
+    @description_id_pairs= Category.get_description_key_pairs
+
     respond_to do |format|
       if @item.update(weight_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
@@ -67,7 +71,7 @@ class ItemsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def item_params
-    params.require(:item).permit(:image, :price, :description, :category_key)
+    params.require(:item).permit(:image, :price, :name, :description, :category_key)
   end
 
 end

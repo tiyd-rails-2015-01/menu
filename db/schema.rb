@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150202183845) do
     t.float    "price"
     t.string   "description"
     t.integer  "category_key"
+    t.string   "name"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

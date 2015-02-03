@@ -20,16 +20,17 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :category_key %><br>
-    <%= f.number_field :category_key %>
-  </div> -->
   <div class="field">
     <%= f.label :category_key %><br>
     <%= f.select (:category_key), @description_id_pairs %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
