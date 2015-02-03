@@ -1,10 +1,13 @@
-class ItemController < ApplicationController
+class ItemsController < ApplicationController
+  before_action :set_item
 
   def index
     @items = Item.all
   end
 
   def show
+        # format.html { redirect_to @items}
+        # format.json { render :edit, status: :created, location: @items }
   end
 
   def new
