@@ -19,7 +19,15 @@
  @import 'neat';
 
  body {
-   background-color: #F4F5F7;
+   background-color: lightblue;
+ }
+
+ img {
+   max-width:50%;
+   max-height:50%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
  }
 
 
@@ -86,10 +94,10 @@
 //   z-index: -1;
 // }
 //
-// img {
-//   max-width:50%;
-//   max-height:50%;
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+img {
+  max-width:50%;
+  max-height:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
