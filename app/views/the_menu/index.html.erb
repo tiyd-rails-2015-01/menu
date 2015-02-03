@@ -1,0 +1,29 @@
+<div class="menu">
+  <% @meals.each do |meal| %>
+    <div class="meal">
+      <%= image_tag("#{meal.name.downcase}.png", height:50 )%><br>
+      <% meal.categories.each do |category| %>
+        <%= image_tag("#{category.name.downcase}.png", height:35 )%><br>
+        <% picture = category.priciest_picture %>
+        <% if picture %>
+          <%= image_tag(picture, height:300 )%><br>
+        <% end %>
+        <ul>
+          <% category.foods.each do |food| %>
+            <li>
+              <%=food.name %><br>
+              <%=food.description %>
+              <%=food.price %><br>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
+<p>
+  <%= link_to 'Modify menu', foods_path %>
+  <%= link_to 'Home', root_path %>
+</p>
