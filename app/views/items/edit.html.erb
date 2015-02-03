@@ -1,7 +1,8 @@
+<p id="notice"><%= notice %></p>
 <h1>Editing Item</h1>
 
 <%= render 'form' %>
 
 
-<%= link_to 'Back', item_path %>
-<%= link_to "Delete", @item, :method=>:delete, :class=>:destroy %>
+
+<%= button_to "Delete", @item, :method=>:delete, :class=>:destroy %>

@@ -1,0 +1,44 @@
+h1 {
+  float: left;
+}
+
+header {
+  float: left;
+}
+
+.field {
+  clear: both;
+}
+
+table {
+  clear: both;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+nav ul li{
+  list-style: none;
+  float: left;
+
+}
+
+nav ul li a {
+  display: block;
+  color: gray;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px;
+  border-left:  solid 1px #333;
+}
+nav ul li a:hover {
+  background: #222;
+}
+nav ul li a:active {
+  -webkit-box-shadow: 0 0 5px rgba(0,0, 0, 0.9) inset;
+  -moz-box-shadow: 0 0 5px rgba(0,0, 0, 0.9) inset;
+  box-shadow: 0 0 5px rgba(0,0, 0, 0.9) inset;
+
+}
