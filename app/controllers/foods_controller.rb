@@ -45,12 +45,14 @@ class FoodsController < ApplicationController
     end
   end
 
-  private def set_food
-    @food = Food.find(params[:id])
-  end
+  private
+
+    def set_food
+      @food = Food.find(params[:id])
+    end
 
 
-  private def food_params
-    params.require(:food).permit(:category_id, :name, :description, :price)
-  end
+    def food_params
+      params.require(:food).permit(:category_id, :name, :description, :price)
+    end
 end
