@@ -31,9 +31,10 @@ class ItemsController < ApplicationController
   end
 
   def index
-  @entree_items = Item.all.where(category_id: 1)
-    @app_items = Item.all.where(category_id: 2)
-    @special_items = Item.all.where(category_id: 3)
+    # @entree_items = Item.all.where(category_id: 1)
+    # @app_items = Item.all.where(category_id: 2)
+    # @special_items = Item.all.where(category_id: 3)
+    @categories = Category.all
   end
 
   def destroy
