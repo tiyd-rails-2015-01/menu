@@ -2,7 +2,7 @@
 
 <h1>Big Cheese</h1>
 
-<table>
+<!-- <table> -->
   <!-- <thead>
     <tr>
       <th>Item name</th>
@@ -44,7 +44,7 @@
       <td><%= item.price %></td>
     </tr>
     <% end %>
-    <img src='assets/spinach.jpg'>
+    <%= image_tag 'spinach.jpg' %>
   </tbody>
 </table>
 
@@ -67,7 +67,7 @@
       <td><%= item.price %></td>
     </tr>
     <% end %>
-    <img src='assets/grilled_cheese.jpg'>
+    <%= image_tag 'grilled_cheese.jpg' %>
   </tbody>
 </table>
 
@@ -89,9 +89,11 @@
       <td><%= item.price %></td>
     </tr>
     <% end %>
-    <img src='assets/cheesecake.jpg'>
+    <%= image_tag 'cheesecake.jpg' %>
   </tbody>
 </table>
 
 
 <br>
+
+<%= link_to 'New Item', new_item_path %>
