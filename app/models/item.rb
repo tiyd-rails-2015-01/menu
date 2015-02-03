@@ -1,3 +1,4 @@
 class Item < ActiveRecord::Base
-  belongs_to :categories
+  # validates :name, :description, :price, :section_id, presence: true
+  belongs_to :category
 end
