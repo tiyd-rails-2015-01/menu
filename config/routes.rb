@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  root 'items#index'
-
   get 'item/new'
 
   get 'item/create'
