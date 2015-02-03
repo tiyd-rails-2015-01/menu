@@ -1,11 +1,13 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:edit, :show, :update]
+  before_action :set_item, only: [:edit, :show, :update, :destroy]
   def new
     @item = Item.new
+    @catagory = Catagory.new
   end
 
   def index
     @items = Item.all
+    @catagory_index = Catagory.all
   end
 
   def show
@@ -37,6 +39,14 @@ class ItemsController < ApplicationController
         format.html { render :edit }
       #  format.json { render json: @item.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    @item.destroy
+    respond_to do |format|
+      format.html { redirect_to items_path, notice: 'Food Item was successfully destroyed.' }
+      #format.json { head :no_content }
     end
   end
 

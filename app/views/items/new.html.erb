@@ -26,6 +26,9 @@
   <%= f.text_area :description %>
 </div>
 
+<%= select_tag 'catagory', options_for_select(@catagory_index.map{|catagory| ["#{catagory.type}", catagory.id] }) %>
+
+
 <div class="actions">
   <%= f.submit %>
 </div>
