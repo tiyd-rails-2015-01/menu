@@ -19,6 +19,10 @@ class ItemsController < ApplicationController
 
   end
 
+  def show
+    redirect_to edit_item_path
+  end
+
   # POST /item
   # POST /items.json
   def create
