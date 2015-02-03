@@ -4,7 +4,7 @@
 
 <%@categories.each do |category|%>
   <h2><%= category.name %></h2>
-  <!-- <%= image_tag "lasagna.jpg" %> -->
+  <%= image_tag category.item_image %>
   <% category.items.each do |item| %>
     <p><%= link_to item.name, edit_item_path(item) %></p>
     <p><%= item.description %></p>
