@@ -1,4 +1,6 @@
 class Catagory < ActiveRecord::Base
+  has_many :items
+ 
 #  validates: presence
 
   def new
@@ -8,6 +10,5 @@ class Catagory < ActiveRecord::Base
   end
 
 
-  has_many :items
 
 end

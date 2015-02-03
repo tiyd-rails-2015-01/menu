@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class CatagoriesController < ApplicationController
   def new
   end
   def create

@@ -2,12 +2,11 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :show, :update, :destroy]
   def new
     @item = Item.new
-    @catagory = Catagory.new
+    @catagory_index = Catagory.all
   end
-
   def index
     @items = Item.all
-    @catagory_index = Catagory.all
+    # @catagory_index = Catagory.all
   end
 
   def show
@@ -15,9 +14,11 @@ class ItemsController < ApplicationController
 
 
   def edit
+
   end
 
   def create
+
     @item = Item.new(item_params)
     respond_to do |format|
       if @item.save
