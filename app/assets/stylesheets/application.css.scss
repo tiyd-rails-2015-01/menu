@@ -30,24 +30,31 @@
    margin-right: auto;
  }
 
- .whole-meal {
-  //  @include span-columns(12);
- }
-
 .new {
   @include span-columns(4);
 }
 
-.category {
-  @include span-columns(4);
-  text-align: center;
+.meal {
+  @include outer-container;
+  .category {
+    @include span-columns(4);
+    // text-align: center;
+    // display: inline-block;
 
-  th {
-    text-align: center;
+    th {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+    td {
+      padding-left: 10px;
+    }
   }
 }
 .inner-category {
-  // @include span-columns(12);
+  @include span-columns(12);
 }
 
 h1 {
@@ -56,67 +63,7 @@ h1 {
 
 table {
   display: inline-block;
-  float: left;
+  width: 100%;
   margin: none;
   // padding: 25px;
   }
-
-
-
-
-
-
-
-
-
-// $font: "Comic Sans MS";
-//
-//
-// h1 {
-//   font-family: $font;
-//   text-align: center;
-// }
-//
-// div {
-//   font-family: $font;
-//   display: inline-block;
-//   float:left;
-//   width: 33%;
-//   border: 1px solid darkblue;
-//
-//
-//   h2 {
-//     text-align: center;
-//   }
-//
-//   a {
-//     color: darkblue;
-//     text-decoration: none;
-//   }
-// }
-//
-// div.bottom {
-//   width: 100%;
-//   border: none;
-//   text-align: center
-// }
-//
-// body::after {
-//   content: "";
-//   background: url(http://mycruisesearcher.com/sites/all/img/costa/fortuna/photos/fortuna-conte_restaurant_600.jpg);
-//   opacity: 0.5;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   right: 0;
-//   position: absolute;
-//   z-index: -1;
-// }
-//
-img {
-  max-width:50%;
-  max-height:50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
