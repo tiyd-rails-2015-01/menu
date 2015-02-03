@@ -5,18 +5,30 @@
 <h2>Menu</h2>
 <% @mealtimes.each do |m| %>
   <h2><%= m.name %></h2>
-  <div class="cards container">
+  <div class="mealtimes">
     <% m.categories.each do |c| %>
-      <div class="card">
-        <div class="card-image">
-          <%= link_to image_tag(c.picture), new_item_path(:category_id=> c.id)%>
-        </div>
-        <div class="card-header">
+      <div class="categories">
+          <%= link_to image_tag(c.picture, width: 310), new_item_path(:category_id=> c.id)%>
           <h2> <%= c.name%> </h2>
-        </div>
-        <div class="card-copy">
+        <div class="Items">
           <% c.items.each do |i|  %>
-            <p><%=link_to i.name, edit_item_path(i) %></p>
+            <%if i.feature %>
+            <div class= "cards">
+              <div class = "card">
+                <div class="card-image">
+                <%= image_tag(i.picture, width: 300) %>
+                </div>
+                <div class="card-header">
+                  <p><%=link_to i.name, edit_item_path(i, :category_id => c.id) %></p>
+                </div>
+                <div class="card-copy">
+                  <%= i.description %>
+                </div>
+              </div>
+            </div>
+            <% else %>
+            <p><%=link_to i.name, edit_item_path(i, :category_id => c.id) %></p>
+            <% end %>
           <% end %>
         </div>
       </div>

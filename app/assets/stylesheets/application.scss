@@ -1,12 +1,20 @@
 @import "bourbon";
 @import "navigation";
+@import "neat";
+@import "cards";
 
 body{
-  background: black;
+  @include linear-gradient(to top, red, orange);
   color: #FFEFDB;
 }
 
 .card {
   color: black;
 }
-@import 'cards';
+
+.mealtimes{
+  @include outer-container;
+}
+.categories{
+  @include span-columns(4);
+}
