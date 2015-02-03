@@ -1,21 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Item</strong>
+  <strong>Item:</strong>
   <%= @item.item_name %>
 </p>
 
 <p>
-  <strong>Weight:</strong>
+  <strong>Price:</strong>
   <%= @item.item_price %>
 </p>
 
 <p>
-  <strong>Weight:</strong>
+  <strong>Desciption:</strong>
   <%= @item.item_description %>
+</p>
+
+<p>
+  <strong>Featured:</strong>
+  <%= @item.featured %>
 </p>
 
 
 
-<%= link_to 'Edit', edit_item_path(@item) %> 
+<%= link_to 'Edit', edit_item_path(@item) %>
 <%= link_to 'Home', root_path %>

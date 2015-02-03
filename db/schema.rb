@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203200441) do
+ActiveRecord::Schema.define(version: 20150203205923) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "course_type"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "picture"
+    t.string   "mealtime_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -25,10 +26,10 @@ ActiveRecord::Schema.define(version: 20150203200441) do
     t.float    "item_price"
     t.string   "item_description"
     t.integer  "course_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "time_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "image"
+    t.boolean  "featured",         default: false
   end
 
   create_table "mealtimes", force: :cascade do |t|
