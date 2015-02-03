@@ -5,6 +5,9 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
+  def home
+  end
+
   def new
     @item = Item.new
   end

@@ -19,10 +19,9 @@ body {text-align :center;
       border-style :groove;
       border-color :darkgrey;
       border-size :500px;
-
       }
 
-h1 {:center;
+h1 {text-align :center;
     color :red;
     }
 
