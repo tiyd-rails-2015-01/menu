@@ -1,0 +1,6 @@
+<h1>Editing Item</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', items_path %>
+<td><%= link_to 'Delete', item_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
