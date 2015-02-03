@@ -36,6 +36,7 @@ class ItemsController < ApplicationController
     # @app_items = Item.all.where(category_id: 2)
     # @special_items = Item.all.where(category_id: 3)
     @categories = Category.all
+    @meals = Meal.all
   end
 
   def destroy
@@ -56,6 +57,6 @@ class ItemsController < ApplicationController
   # end
 
   def item_params
-    params.require(:item).permit(:name, :price, :category_id)
+    params.require(:item).permit(:name, :price, :category_id, :meal_id)
   end
 end

@@ -15,7 +15,7 @@
   <div class="new">
     <div class="field">
       <%= f.label :meal %><br>
-      <%= f.collection_select(f.category.id, Meal.all, :id, :name) %>
+      <%= f.collection_select(:meal_id, Meal.all, :id, :name) %>
     </div>
     <div class="field">
       <%= f.label :category %><br>
