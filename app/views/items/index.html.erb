@@ -3,22 +3,24 @@
 <p> Welcome to Ashley's Bistro, world famous for our "Make Your Own Menu"! Please click on
   meal type image to make a new menu item for that meal </p>
 <h2>Menu</h2>
-<div class="cards container">
-<% @categories.each do |c| %>
-  <div class="card">
-    <div class="card-image">
-      <%= link_to image_tag("#{c.name.downcase}.png", width: 400), new_item_path(:category_id=> c.id)%>
-    </div>
-    <div class="card-header">
-      <h2> <%= c.name%> </h2>
-    </div>
-    <div class="card-copy">
-      <% c.items.each do |i|  %>
-      <p><%=link_to i.name, edit_item_path(i) %></p>
-      <% end %>
-    </div>
-  </div>
+<% @mealtimes.each do |m| %>
+  <h2><%= m.name %></h2>
+  <div class="cards container">
+    <% m.categories.each do |c| %>
+      <div class="card">
+        <div class="card-image">
+          <%= link_to image_tag(c.picture), new_item_path(:category_id=> c.id)%>
+        </div>
+        <div class="card-header">
+          <h2> <%= c.name%> </h2>
+        </div>
+        <div class="card-copy">
+          <% c.items.each do |i|  %>
+            <p><%=link_to i.name, edit_item_path(i) %></p>
+          <% end %>
+        </div>
+      </div>
 
-
-  <% end %>
+    <% end %>
   </div>
+<% end %>

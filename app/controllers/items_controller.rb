@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @categories= Category.all
+    @mealtimes= Mealtime.all
   end
 
   def create
