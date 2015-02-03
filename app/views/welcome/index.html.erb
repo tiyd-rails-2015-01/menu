@@ -19,7 +19,7 @@
       <% @items.each do |item| %>
         <% if item.section == section %>
         <tr>
-          <td><%= item.name %></td>
+          <td><%= link_to item.name, edit_item_path(item.id) %></td>
           <td><%= item.description %></td>
           <td><%= item.price %></td>
         </tr>
