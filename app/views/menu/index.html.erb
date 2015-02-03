@@ -2,15 +2,14 @@
 
 <h1>Menu</h1>
 
-<%@categories.each do |category|%>
+<%@categories.order(:name).each do |category|%>
   <h2><%= category.name %></h2>
-  <%= image_tag category.item_image %>
+  <%= image_tag category.item_image, class: "item_image" %>
   <% category.items.each do |item| %>
     <p><%= link_to item.name, edit_item_path(item) %></p>
     <p><%= item.description %></p>
     <p><%= item.price.round(2) %></p>
   <%end%>
 <%end%>
-
 
 <p><%= link_to "Edit Menu Items", items_path %></p>
