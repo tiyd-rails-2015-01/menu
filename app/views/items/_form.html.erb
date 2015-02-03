@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :category_key %><br>
-    <%= f.select (:category_key), @description_id_pairs %>
+    <%= f.select (:category_key), Category.get_description_key_pairs %>
   </div>
   <div class="actions">
     <%= f.submit %>

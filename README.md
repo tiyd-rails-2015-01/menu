@@ -10,4 +10,4 @@ In *this* world, C is not just for cookie, it is also for the Crumbling ediface 
 
 https://cookiesplosion.herokuapp.com/
 
-Also, heroku doesn't eat cookies. It eats my app.
+Also, heroku doesn't eat cookies. It eats my app. Alas.

@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @description_id_pairs = Category.get_description_key_pairs
-    
+
     @item = Item.new(item_params)
 
     respond_to do |format|
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
     @description_id_pairs= Category.get_description_key_pairs
 
     respond_to do |format|
-      if @item.update(weight_params)
+      if @item.update(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
