@@ -1,9 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:edit, :update, :destroy]
+
   def index
     @items = Item.all
-  end
-
-  def show
   end
 
   def new
@@ -18,8 +17,8 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render :show, status: :created, location: @item }
+        format.html { redirect_to items_path, notice: 'Item was successfully created.' }
+        format.json { render :edit, status: :created, location: @item }
       else
         format.html { render :new }
         format.json { render json: @item.errors, status: :unprocessable_entity }
@@ -30,8 +29,8 @@ class ItemsController < ApplicationController
   def update
     respond_to do |format|
       if @item.update(item_params)
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
-        format.json { render :show, status: :ok, location: @item }
+        format.html { redirect_to items_path, notice: 'Item was successfully updated.' }
+        format.json { render :edit, status: :ok, location: @item }
       else
         format.html { render :edit }
         format.json { render json: @item.errors, status: :unprocessable_entity }

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Item History</h1>
+<h1>Menu Items</h1>
 
 <table>
   <thead>
@@ -16,9 +16,8 @@
     <% @items.each do |item| %>
       <tr>
         <td class=""><%= item.name %></td>
-        <td class=""><%= item.price %></td>
+        <td class=""><%= item.price.round(2) %></td>
         <td class=""><%= item.description %></td>
-        <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -28,6 +27,6 @@
 
 <br>
 
-<%= link_to 'New Exercise', new_item_path %>
+<%= link_to 'New Item', new_item_path %>
 
 <p class=""><%= link_to "Back to Menu", menu_path %></p>
