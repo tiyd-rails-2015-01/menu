@@ -15,7 +15,7 @@ before_action :category_list
   end
 
   def create
-    @food = @foods.blank? ? 0 : Food.new(food_params)
+    @food = Food.new(food_params)
     #@food.category_id = @category.id
     respond_to do |format|
       if @food.save
