@@ -10,11 +10,11 @@ class ItemsController < ApplicationController
   end
 
   def show
+    redirect_to action: "edit"
   end
 
 
   def edit
-
   end
 
   def create
@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
 
 
   private def item_params
-    params.require(:item).permit(:name, :price, :description)
+    params.require(:item).permit(:name, :price, :description, :catagory_id)
   end
 
   private def set_item

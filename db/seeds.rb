@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-catagories= Catagory.create([{name: 'Fast Food'}, {name: 'Elevenses'}] )
+catagories= Catagory.create([{name: 'Breakfast'}, {name: 'Lunch'},{name: 'Dinner'}] )
