@@ -25,8 +25,7 @@
 </div>
 <div class="field">
   <%= i.label :section_id %><br>
-  <%= i.collection_select :section_id, Section.all, :id, :name %>
-  <!-- better to have a blank thing first so people know to fill it in -->
+  <%= i.collection_select :section_id, Section.all, :id, :name, {:include_blank => ""} %>
 </div>
 <div class="actions">
   <%= i.submit %>
