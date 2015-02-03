@@ -12,8 +12,8 @@
   <% end %>
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.select :category_name, options_for_select(["Appetizers", "Entree", "Dessert"], params[:category_name]), :include_blank=> true %><br>
-  </div>
+    <%= f.collection_select :category_id, Category.all, :id, :name, { :selected =>params[:category_id], :include_blank=>true} %><br>
+    </div>
   <div class="field">
     <%= f.label :name%><br>
     <%= f.text_field :name %>
