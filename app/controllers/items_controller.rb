@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
 
   def edit
     @categories = Category.all
+    @items = Item.all
   end
 
   def update

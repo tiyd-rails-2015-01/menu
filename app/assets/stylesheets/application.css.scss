@@ -30,7 +30,21 @@
    margin-right: auto;
  }
 
+.new {
+  @include span-columns(4);
+}
 
+.category {
+  @include span-columns(4);
+  text-align: center;
+
+  th {
+    text-align: center;
+  }
+}
+.inner-category {
+  @include span-columns(12);
+}
 
 
 
