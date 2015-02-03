@@ -1,2 +1,44 @@
  @import 'bourbon';
- @import 'food';
+ @import 'neat';
+ h1 {
+   font-size: 40px;
+   @include radial-gradient(#1e5799, #3dc3d1);
+   @include radial-gradient(#1e5799, #3dc3d1, $fallback: red);
+   @include radial-gradient(circle at 50% 50%, #eee 10%, #1e5799 30%, #efefef);
+ }
+
+ li {
+   @include border-style(dashed);
+ }
+
+ button {
+   align: center;
+   @include button(shiny, #ccc);
+ }
+
+ body {
+   text-align: center;
+
+   @include background(linear-gradient(gray, #ccc) left repeat);
+   @include background(linear-gradient(gray, #ccc) left repeat, radial-gradient(gray, #ccc) left repeat);
+   @include background(url("/images/a.png"), linear-gradient(gray, #ccc), center no-repeat yellow scroll);
+ }
+
+ p {
+   font-size: 20px;
+   font-weight: bold;
+ }
+
+ ul {
+   list-style-type: none;
+ }
+
+ td {
+   align: left;
+ }
+
+ h2 {
+   font-size: 30px;
+ }
+
+ 
