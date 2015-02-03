@@ -1,0 +1,46 @@
+<h1>Menu</h1>
+
+<div class="cards container">
+
+  <div class="card">
+    <div class="card-image">
+      <%= image_tag("appetizer.png", width: 400)%>
+    </div>
+    <div class="card-header">
+      <h2> <%= @appetizer%> </h2>
+    </div>
+    <div class="card-copy">
+      <% @appetizers.each do |a|  %>
+      <p><%=link_to a.name, edit_item_path(a) %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <%= image_tag("entree.jpg", width: 400 )%>
+    </div>
+    <div class="card-header">
+      <h2> <%= @entree%> </h2>
+    </div>
+    <div class="card-copy">
+      <% @entrees.each do |e|  %>
+      <p><%= link_to e.name, edit_item_path(e) %></p>
+      <% end %>
+      </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <%= image_tag("dessert.png", width: 400)%>
+    </div>
+    <div class="card-header">
+      <h2> <%= @dessert%> </h2>
+    </div>
+    <div class="card-copy">
+      <% @desserts.each do |d|  %>
+      <p><%= link_to d.name, edit_item_path(d) %></p>
+      <% end %>
+    </div>
+    </div>
+  </div>
