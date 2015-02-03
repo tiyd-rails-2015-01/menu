@@ -4,6 +4,7 @@ before_action :category_list
   def new
     @food = Food.new
     @category = Category.new
+    @meal = Meal.new
   end
 
   def index
@@ -16,31 +17,24 @@ before_action :category_list
 
   def create
     @food = Food.new(food_params)
-    #@food.category_id = @category.id
-    respond_to do |format|
-      if @food.save
-        format.html { redirect_to foods_path, notice: 'Menu Item was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @food.save
+      redirect_to foods_path, notice: 'Menu Item was successfully created.'
+    else
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @food.update(food_params)
-        format.html { redirect_to foods_path, notice: 'Menu Item was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+    if @food.update(food_params)
+      redirect_to foods_path, notice: 'Menu Item was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
     @food.destroy
-    respond_to do |format|
-      format.html { redirect_to foods_path, notice: 'Menu Item was successfully removed.' }
-    end
+    redirect_to foods_path, notice: 'Menu Item was successfully removed.'
   end
 
   private

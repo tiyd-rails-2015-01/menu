@@ -1,20 +1,29 @@
   <tbody>
-    <% @categorys.each do |category| %>
-      <tr>
-        <td><%= image_tag("#{category.name.downcase}.png", height:35 )%><br>
-          <ul>
-            <% category.foods.each do |food| %>
-              <li>
-                <%=food.name %><br>
-                <%=food.description %>
-                <%=food.price %><br>
-              </li>
+    <div class="menu">
+      <% @meals.each do |meal| %>
+        <div class="meal">
+          <td><%= image_tag("#{meal.name.downcase}.png", height:50 )%><br>
+            <% meal.categories.each do |category| %>
+              <tr>
+                <td><%= image_tag("#{category.name.downcase}.png", height:35 )%><br>
+                  <ul>
+                    <% category.foods.each do |food| %>
+                      <li>
+                        <%=food.name %><br>
+                        <%=food.description %>
+                        <%=food.price %><br>
+                      </li>
+                    <% end %>
+                  </ul>
+                </td>
+              </tr>
             <% end %>
-          </ul>
-        </td>
-      </tr>
-    <% end %>
+          </td>
+        </div>
+      <% end %>
+    </div>
   </tbody>
+
 
 <p>
   <%= link_to 'Modify menu', foods_path %>

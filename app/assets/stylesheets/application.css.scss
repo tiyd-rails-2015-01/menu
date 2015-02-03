@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to crea
+ te a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+ @import 'bourbon';
+ @import 'neat';
+
+ @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+ body {
+   margin-top:40px;
+   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+   color:#222;
+   text-align:center;
+ }
+
+ a {
+   border-left:  1px solid;
+   padding: 2px;
+   text-decoration: none;
+   color:#000;
+   font-size: .75em;
+   opacity:0;
+   -webkit-animation:fadeIn ease-in 1;
+   -webkit-animation-fill-mode:forwards;
+   -webkit-animation-duration:2s;
+   -webkit-animation-delay: 1.2s;
+   &:hover {
+     color:#888
+   }
+ }
+
+ ul  {
+   opacity:0;
+   -webkit-animation:fadeIn ease-in 1;
+   -webkit-animation-fill-mode:forwards;
+   -webkit-animation-duration:1s;
+   -webkit-animation-delay: .4s;
+   list-style-type:none;
+   padding-left:0;
+ }
+
+ .title  {
+   opacity:0;
+   -webkit-animation:fadeIn ease-in 1;
+   -webkit-animation-fill-mode:forwards;
+   -webkit-animation-duration:1s;
+   -webkit-animation-delay: .4s;
+   margin-top:100px;
+   a{
+     font-size: 1.5em;
+   }
+ }
+ table {
+   opacity:0;
+   -webkit-animation:fadeIn ease-in 1;
+   -webkit-animation-fill-mode:forwards;
+   -webkit-animation-duration:1s;
+   -webkit-animation-delay: .4s;
+   text-align:left;
+   margin:0 auto;
+ }
+ td {
+   opacity:0;
+   -webkit-animation:fadeIn ease-in 1;
+   -webkit-animation-fill-mode:forwards;
+   -webkit-animation-duration:1s;
+   -webkit-animation-delay: .4s;
+   padding-right: 10px;
+ }
+ .menu {
+   @include outer-container;
+   .meal { @include span-columns(6); }
+ }
