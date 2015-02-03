@@ -1,32 +1,42 @@
  @import 'bourbon';
+ @import 'base/base';
  @import 'neat';
+
+ div, image {
+ }
+
  h1 {
    font-size: 40px;
-   @include radial-gradient(#1e5799, #3dc3d1);
-   @include radial-gradient(#1e5799, #3dc3d1, $fallback: red);
-   @include radial-gradient(circle at 50% 50%, #eee 10%, #1e5799 30%, #efefef);
+   border-bottom-style: solid;
+   @include radial-gradient(#ccc, #ccc);
+   @include radial-gradient(#ccc, #ccc, $fallback: red);
+   @include radial-gradient(circle at 50% 50%, #eee 10%, #ccc 30%, #aaa);
  }
 
- li {
-   @include border-style(dashed);
- }
-
- button {
-   align: center;
-   @include button(shiny, #ccc);
+ section {
+   text-align: center;
+   @include outer-container;
+   aside { @include span-columns(6); }
+   article { @include span-columns(6); }
  }
 
  body {
    text-align: center;
+   font-family: sans-serif;
 
    @include background(linear-gradient(gray, #ccc) left repeat);
    @include background(linear-gradient(gray, #ccc) left repeat, radial-gradient(gray, #ccc) left repeat);
-   @include background(url("/images/a.png"), linear-gradient(gray, #ccc), center no-repeat yellow scroll);
+   @include background(url("/images/a.png"), linear-gradient(gray, #ccc), center no-repeat gray scroll);
  }
 
- p {
+ .food-name {
    font-size: 20px;
    font-weight: bold;
+   margin-top: 20px;
+ }
+
+ .food-description {
+   margin-bottom: 20px;
  }
 
  ul {
@@ -39,6 +49,8 @@
 
  h2 {
    font-size: 30px;
+   border-bottom-style: solid;
+   @include radial-gradient(#ccc, #ccc);
+   @include radial-gradient(#ccc, #ccc, $fallback: red);
+   @include radial-gradient(circle at 50% 50%, #eee 10%, #ccc 30%, #aaa);
  }
-
- 

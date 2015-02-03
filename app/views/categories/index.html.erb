@@ -1,27 +1,27 @@
 <html>
 <h1> Menu </h1>
-<tbody>
+<table>
   <% @categories.each do |category| %>
   <h2><%=category.name %></h2><br>
   <tr>
-    <td><%= image_tag("#{category.name.downcase}.jpg", height:250 )%><br>
-      <ul>
+    <div class = "image"><td><%= image_tag("#{category.name.downcase}.jpg", height:250 )%></div><br>
+      <section><ul>
         <% category.foods.each do |food| %>
         <li>
-          <p><%=food.name %></p>
-          <%=food.description %><br>
-          <p><%=food.price %></p>
+          <aside>
+            <div class="food-name"><%=food.name %></div>
+            <div class="food-description"><%=food.description %></div></aside>
+          <article><%=food.price %></article>
         </li>
         <% end %>
-      </ul>
+      </ul></section>
     </td>
   </tr>
   <% end %>
-</tbody>
+</table>
 
 <p>
 <button><%= link_to 'Add New Item', foods_path %></button>
-  <br>
   <button><%= link_to 'Home', root_path %></button>
 </p>
 </html>
