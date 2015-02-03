@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources: items
+  resources :items
 
   get 'menu' => 'menu#index'
 
