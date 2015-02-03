@@ -1,10 +1,10 @@
-<%= form_for(@menu) do |f| %>
-  <% if @menu.errors.any? %>
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this bank_register from being saved:</h2>
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
       <ul>
-      <% @menu.errors.full_messages.each do |message| %>
+      <% @item.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,13 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :transaction_name %><br>
-    <%= f.text_field :transaction_name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :transaction_amount %><br>
-    <%= f.text_field :transaction_amount %>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
