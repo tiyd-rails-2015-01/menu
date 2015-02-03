@@ -25,7 +25,7 @@
   </div>
   <div class="field">
       <%= f.label :category_id %><br>
-      <%= f.select :category_id, [["Appetizers", 1], ["Entrees", 2]], :include_blank=> true %><br>
+      <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank=> true %><br>
     </div>
   <div class="actions">
     <%= f.submit %>
