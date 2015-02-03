@@ -20,9 +20,9 @@ button {
 body {
   text-align: center;
 
-@include background(linear-gradient(gray, green) left repeat);
-@include background(linear-gradient(gray, green) left repeat, radial-gradient(gray, yellow) left repeat);
-@include background(url("/images/a.png"), linear-gradient(gray, green), center no-repeat yellow scroll);
+@include background(linear-gradient(gray, #ccc) left repeat);
+@include background(linear-gradient(gray, #ccc) left repeat, radial-gradient(gray, #ccc) left repeat);
+@include background(url("/images/a.png"), linear-gradient(gray, #ccc), center no-repeat yellow scroll);
 }
 
 p {
