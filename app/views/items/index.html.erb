@@ -8,7 +8,7 @@
   <div class="mealtimes">
     <% m.categories.each do |c| %>
       <div class="categories">
-          <%= link_to image_tag(c.picture, width: 310), new_item_path(:category_id=> c.id)%>
+          <%= link_to image_tag(c.picture, width: 310, height: 200), new_item_path(:category_id=> c.id)%>
           <h2> <%= c.name%> </h2>
         <div class="Items">
           <% c.items.each do |i|  %>
