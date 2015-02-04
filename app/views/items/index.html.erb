@@ -16,7 +16,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= item.course.name %></td>
+        <td><%= item.course.name %> <%= image_tag(item.course.image) %> </td>
         <td><%= item.name %></td>
         <td><%= item.price %></td>
         <td><%= item.description %></td>
@@ -40,5 +40,5 @@
     </br>
   </div>
       <br>
-      <!-- <%= image_tag "http://static.tvtropes.org/pmwiki/pub/images/ironchef.jpg" %> -->
+      <%= image_tag "http://static.tvtropes.org/pmwiki/pub/images/ironchef.jpg" %>
       </br>

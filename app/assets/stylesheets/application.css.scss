@@ -25,6 +25,10 @@ table {
         .second-page { @include span-columns(8); }
         article { @include span-columns(4); }
                                         }
+
+          img {
+            width: 100px;
+          }
                                         }
 
 body {
@@ -38,12 +42,12 @@ body {
       }
 
 
-h1, h2,  h3 {
-            font-family: "header fonts", sans-serif;
-            text-align :center;
-            color :darkred;
+h1, h2, h3 {
+      font-family: "header fonts", sans-serif;
+      text-align :center;
+      color :darkred;
 
-            }
+      }
 
 th {
     font-size :24px;
@@ -62,6 +66,8 @@ td {
 p {
   text-align :center;
   }
+
+
 
 // h3 {.hero {
 //   ///////////////////////////////////////////////////////////////////////////////////
