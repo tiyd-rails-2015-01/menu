@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [ :edit, :update, :destroy]
-
+  before_action :set_meal, only: [:edit]
   # GET /weights
   # GET /weights.json
   def index
@@ -45,7 +45,9 @@ class ItemsController < ApplicationController
      redirect_to root_path, notice: 'Item was successfully destroyed.'
   end
 
-
+  private def set_meal
+    session[:item_id] = Item.find(params[:id]).name
+  end
   # Use callbacks to share common setup or constraints between actions.
   private def set_item
     @item = Item.find(params[:id])
