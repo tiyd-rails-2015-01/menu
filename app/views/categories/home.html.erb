@@ -1,0 +1,56 @@
+
+
+<h2>Menu</h2>
+
+
+<table>
+  <thead>
+    <tr><h3>Entrees</h3></tr>
+    <tr><%= image_tag @categories.find_by_category_name("Entrees").image %></tr>
+    <tr>
+
+      <th>Item Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @entrees.each do |item| %>
+    <tr>
+
+      <td><%= item.item_name %></td>
+      <td><%= item.description %></td>
+      <td><%= item.price %></td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr><h3>Desserts</h3></tr>
+    <tr><%= image_tag @categories.find_by_category_name("Desserts").image %></tr>
+    <tr>
+
+      <th>Item Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @desserts.each do |item| %>
+    <tr>
+
+      <td><%= item.item_name %></td>
+      <td><%= item.description %></td>
+      <td><%= item.price %></td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
