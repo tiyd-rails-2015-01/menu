@@ -1,20 +1,12 @@
 
-
+<center>
 <div class="inner-div">
 <p id="notice"><%= notice %></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h2>Menu</h2>
-
+<img src="assets/corks.jpg" alt="Corks" height="100" width="100">
 <table>
-  <thead>
-    <tr>
-      <th>Course</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @courses.each do |course| %>
@@ -42,3 +34,4 @@
 <%= link_to '<button type="button">New Item</button>' .html_safe, new_item_path %>
 <%= link_to '<button type="button">Menu Item List</button>' .html_safe, items_path %>
 <br>
+</center>
