@@ -1,0 +1,51 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+ @import "bourbon";
+ @import "neat";
+ // Image asset with a linear-gradient
+
+body{
+  background-color: #D6FFFF ;
+
+}
+
+h2 {
+  font-family: $helvetica;
+  font-size: golden-ratio(20px,  1);
+  }
+
+
+th {
+  font-family: $helvetica;
+  font-size: golden-ratio(14px,  1);
+  }
+img {
+  width: 100px;
+  }
+
+td {
+  font-family: $helvetica;
+  font-size: golden-ratio(10px,  1);
+}
+button {
+   background-color: #94DBFF;
+   color: #050505;
+   border-radius: 4px;
+   margin-left: 10px;
+   margin-bottom: 10px;
+   box-shadow: #68706F 0 -1px;
+   border:none;
+   /*border: 2px solid black;*/
+ }
