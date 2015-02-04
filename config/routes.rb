@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :items
+  resources :items, except: [:show]
 
   get 'menu' => 'menu#index'
 

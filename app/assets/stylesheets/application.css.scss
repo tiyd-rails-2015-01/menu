@@ -18,9 +18,22 @@
  @import "neat";
 
  // All other imports
+#menu-main {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.categories {
+  font-size: 32px;
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
 
 .item_image {
-  width: 500px;
+  width: 600px;
+  float: center;
 }
 
 
@@ -115,4 +128,11 @@
   .flex-box-big {
     @include flex(1 1 40em);
   }
+}
+
+
+.cards {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
 }
