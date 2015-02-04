@@ -1,0 +1,32 @@
+<ul class="accordion-tabs-minimal">
+  <% @courses.each do |c| %>
+    <li class="tab-header-and-content">
+      <a href="#" class="tab-link"> <%= c.course_type %> </a>
+      <div class="tab-content">
+        <div class="grid-items-lines">
+          <% c.items.each do |i| %>
+            <% if i.featured %>
+              <a href=<%= edit_item_path(i) %> class="grid-item">
+                <%= image_tag c.picture %>
+                <h1> <%= i.item_name %> <%= i.item_price %> </h1>
+                <p> <%= i.item_description %> </p>
+              </a>
+                <a href=<%= edit_item_path(i) %> class="grid-item grid-item-big">
+                  <%= image_tag i.image, :class => "feature" %>
+                </a>
+            <% else %>
+              <a href=<%= edit_item_path(i) %> class="grid-item">
+                <%= image_tag c.picture %>
+                <h1> <%= i.item_name %> <%= i.item_price %> </h1>
+                <p> <%= i.item_description %> </p>
+              </a>
+              <a href=<%= edit_item_path(i) %> class="grid-item grid-item-big">
+                <% image_tag i.image %>
+              </a>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

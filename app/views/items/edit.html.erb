@@ -1,0 +1,7 @@
+<h1>Editing Steps</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Show', edit_item_path(@item) %> 
+<%= link_to 'Home', root_path %>

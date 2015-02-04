@@ -1,0 +1,29 @@
+<%= form_for(@item) do |f|%>
+  <div class="field">
+    <%= f.label :item_name %><br>
+    <%= f.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= f.label :item_price %><br>
+    <%= f.number_field :item_price, step: 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :item_description %><br>
+    <%= f.text_area :item_description %>
+  </div>
+  <div class="field">
+    <%= f.label :course_id %><br>
+    <%= f.collection_select :course_id, Course.all, :id, :course_type %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :featured %><br>
+    <%= f.check_box :featured %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
