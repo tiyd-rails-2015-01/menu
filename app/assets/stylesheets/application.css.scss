@@ -16,13 +16,14 @@
  @import "bourbon";
  @import "neat";
  @import "welcome";
+ @import "items";
 
 
  body {
    font-family: 'Nunito';
    a {
      text-decoration: none;
-     color: #FFF;
+     color: #333;
      font-family: 'Varela Round';
    }
  }
@@ -172,6 +173,7 @@
 // potato
 .side-image {
   ///////////////////////////////////////////////////////////////////////////////////
+
   $base-line-height: 1.5em !default;
   $base-accent-color: #6E6752 !default;
   $base-link-color: $base-accent-color !default;
@@ -186,8 +188,8 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $side-image-background-top: #B5EBEB;
-  $side-image-background-bottom: #5DAC5D;
+  $side-image-background-top: #6E6752 ;
+  $side-image-background-bottom: #6E6752 ;
   $side-image-content-background: #F9F9F9;
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
@@ -206,6 +208,7 @@
     display: block;
     min-height: 12em;
     padding: 3em;
+
 
     @include media($large-screen) {
       @include span-columns(3);

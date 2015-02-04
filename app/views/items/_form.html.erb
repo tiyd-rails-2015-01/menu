@@ -27,7 +27,9 @@
   <%= i.label :section_id %><br>
   <%= i.collection_select :section_id, Section.all, :id, :name, {:include_blank => ""} %>
 </div>
+<br>
 <div class="actions">
   <%= i.submit %>
 </div>
+<br>
 <% end %>
