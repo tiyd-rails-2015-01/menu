@@ -10,9 +10,11 @@
 
   <% if @sections.length != nil %>
     <ul class="accordion-tabs-minimal">
+      <% first = true %>
       <% @sections.each do |section| %>
         <li class="tab-header-and-content">
-        <a href="#" class="tab-link"><%=section.name%></a>
+        <a href="#" class="tab-link <%= first ? 'is-active' : ''%>"><%=section.name%></a>
+        <% first = false %>
         <div class="tab-content">
           <div class="grid-items-lines">
             <a class="grid-item">
