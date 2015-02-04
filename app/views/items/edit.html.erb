@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+<h1>Edit Item</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Delete', item_path, method: :delete, data: { confirm: 'Are you sure?'} %>
+<%= link_to 'Back', items_path %>
