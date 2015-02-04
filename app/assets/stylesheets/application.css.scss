@@ -34,7 +34,8 @@ body {
       // border-color :darkgrey;
       // border-size :500px;
       @include background-image(url("http://www.jillsbistro.com/files/QuickSiteImages/QS_1253h0001.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
-    }
+      background-size: 830px 700px;
+      }
 
 
 h1, h2,  h3 {
