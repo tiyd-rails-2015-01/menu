@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :show, :update, :destroy]
+  # before_action :store_item, only: [:edit]
 
   def index
     @items = Item.all
@@ -51,5 +52,9 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name, :price, :description, :course_id)
     end
+
+    # def store_item
+    #   session[:item] = params[:id]
+    # end
 
   end
