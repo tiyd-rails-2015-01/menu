@@ -1,0 +1,154 @@
+ @import 'bourbon';
+ @import 'base/base';
+ @import 'neat';
+
+ div, image {
+ }
+
+ h1 {
+   font-size: 80px;
+   border-bottom-style: solid;
+   @include radial-gradient(#ccc, #ccc);
+   @include radial-gradient(#ccc, #ccc, $fallback: red);
+   @include radial-gradient(circle at 50% 50%, #eee 10%, #ccc 30%, #aaa);
+ }
+
+ section {
+   text-align: center;
+   @include outer-container;
+   aside { @include span-columns(6); }
+   article { @include span-columns(6); }
+ }
+
+ body {
+   text-align: center;
+   font-family: sans-serif;
+
+   @include background(linear-gradient(gray, #ccc) left repeat);
+   @include background(linear-gradient(gray, #ccc) left repeat, radial-gradient(gray, #ccc) left repeat);
+   @include background(url("/images/a.png"), linear-gradient(gray, #ccc), center no-repeat gray scroll);
+ }
+
+ .food-name {
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: 20px;
+ }
+
+ .food-description {
+   margin-bottom: 20px;
+ }
+
+ ul {
+   list-style-type: none;
+ }
+
+ td {
+   align: left;
+ }
+
+ .category-name {
+   font-size: 30px;
+   border-bottom-style: solid;
+   @include radial-gradient(#ccc, #ccc);
+   @include radial-gradient(#ccc, #ccc, $fallback: red);
+   @include radial-gradient(circle at 50% 50%, #eee 10%, #ccc 30%, #aaa);
+ }
+
+ .footer {
+   ///////////////////////////////////////////////////////////////////////////////////
+   $base-spacing: 1.5em !default;
+   $base-accent-color: #477DCA !default;
+   $medium-screen: em(640) !default;
+   $large-screen: em(860) !default;
+
+   ul {
+     padding: 0;
+   }
+
+   li {
+     list-style: none;
+     line-height: 1.5em;
+   }
+
+   a {
+     text-decoration: none;
+   }
+   //////////////////////////////////////////////////////////////////////////////////
+
+   $footer-background: desaturate(darken(#aaa, 20%), 30%);
+   $footer-color: white;
+   $footer-link-color: transparentize($footer-color, 0.6);
+   $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+   background: $footer-background;
+   padding: ($base-spacing * 2) $gutter;
+   width: 100%;
+
+   .footer-logo {
+     margin-bottom: 2em;
+     text-align: center;
+
+     img {
+       height: 5em;
+     }
+   }
+
+   .footer-links {
+     @include clearfix;
+     margin-bottom: $base-spacing;
+
+     @include media($medium-screen) {
+       @include shift(3);
+     }
+   }
+
+   ul {
+     margin-bottom: $base-spacing * 2;
+
+     @include media($medium-screen) {
+       @include span-columns(3);
+       @include omega(3n);
+       @include clearfix;
+     }
+   }
+
+   li {
+     text-align: center;
+
+     @include media($medium-screen) {
+       text-align: left;
+     }
+   }
+
+   li a {
+     color: $footer-link-color;
+
+     &:focus,
+     &:hover {
+       color: transparentize($footer-color, 0);
+     }
+   }
+
+   li h3 {
+     color: $footer-color;
+     font-size: 1em;
+     font-weight: 800;
+     margin-bottom: 0.4em;
+   }
+
+   hr {
+     border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+     margin: 0 auto $base-spacing;
+     width: 12em;
+   }
+
+   p {
+     color: $footer-disclaimer-color;
+     font-size: 0.9em;
+     line-height: 1.5em;
+     margin: auto;
+     max-width: 35em;
+     text-align: center;
+   }
+ }

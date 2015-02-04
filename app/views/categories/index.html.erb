@@ -1,0 +1,55 @@
+
+<h1> Menu </h1>
+<% @categories.each do |category| %>
+  <table>
+    <div class= "category-name"><%=category.name %></div>
+    <tr>
+      <td><%= image_tag("#{category.name.downcase}.jpg", height:250 )%><br>
+        <section><ul>
+          <% category.foods.each do |food| %>
+            <li>
+              <aside>
+                <div class="food-name"><%=food.name %></div>
+                <div class="food-description"><%=food.description %></div></aside>
+              <article><%=food.price %></article>
+            </li>
+          <% end %>
+        </ul></section>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <button><%= link_to 'Add New Item', foods_path %></button>
+  <button><%= link_to 'Home', root_path %></button>
+</p>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQRPolBbGAX4Pdny35B3F5OseDEBX-4mfFMvXxlr6iL5UAss7c" alt="Logo image">
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><h3>Content</h3></li>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+    <ul>
+      <li><h3>Follow Us</h3></li>
+      <li><a href="javascript:void(0)">Facebook</a></li>
+      <li><a href="javascript:void(0)">Twitter</a></li>
+      <li><a href="javascript:void(0)">YouTube</a></li>
+    </ul>
+    <ul>
+      <li><h3>Legal</h3></li>
+      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+      <li><a href="javascript:void(0)">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <p>Eat here at your own risk.</p>
+</footer>
