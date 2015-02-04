@@ -3,12 +3,11 @@
   <div class="images-wrapper"></div>
   <div class="side-image-content">
     <h1>The Frolicking Goat Cafe</h1>
-      <button>Create new menu item</button>
+      <button><%= link_to 'Create new menu item', new_item_path %></button>
     </div>
   </div>
 <article class="type-system-rounded">
 
-  <p><%= link_to 'New Item', new_item_path %></p>
   <% if @sections.length != nil %>
     <ul class="accordion-tabs-minimal">
       <% @sections.each do |section| %>
@@ -16,11 +15,10 @@
         <a href="#" class="tab-link"><%=section.name%></a>
         <div class="tab-content">
           <div class="grid-items-lines">
-            <a href="javascript:void(0)" class="grid-item">
+            <a class="grid-item">
               <%= image_tag section.picture %>
             </a>
-            <a href="javascript:void(0)" class="grid-item grid-item-big">
-              <table>
+              <table class="grid-item grid-item-big">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -43,14 +41,10 @@
               </table>
               <% end %>
               <% end %>
-              <!-- <h1>Wider Grid Item</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p> -->
             </a>
             <div class="right-cover"></div>
             <div class="bottom-cover"></div>
           </div>
-
-
       </div>
     </li>
   </ul>

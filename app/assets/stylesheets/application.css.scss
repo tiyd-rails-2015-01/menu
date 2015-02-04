@@ -20,6 +20,11 @@
 
  body {
    font-family: 'Nunito';
+   a {
+     text-decoration: none;
+     color: #FFF;
+     font-family: 'Varela Round';
+   }
  }
  article.type-system-rounded {
 
@@ -27,7 +32,7 @@
    $base-border-radius: 3px !default;
    $base-line-height: 1.5em !default;
    $base-spacing: 1.5em !default;
-   $base-accent-color: #477DCA !default;
+   $base-accent-color: #6E6752 !default;
    $base-link-color: $base-accent-color !default;
    $dark-gray: #333 !default;
    $light-gray: #DDD !default;
@@ -203,7 +208,7 @@
     padding: 3em;
 
     @include media($large-screen) {
-      @include span-columns(4);
+      @include span-columns(3);
       background-position: bottom;
       background-size: cover;
       border-right: $side-image-border;
@@ -220,6 +225,7 @@
     }
 
     h1 {
+      font-size:3em;
       margin-bottom: 0.9em;
     }
 
@@ -267,6 +273,10 @@
   a {
     text-decoration: none;
   }
+
+  th {
+    font-style: italic;
+  }
   //////////////////////////////////////////////////////////////////////////////////
 
   $grid-items-background: $base-background-color;
@@ -283,9 +293,7 @@
   .grid-item {
     @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
-    border-bottom: $grid-item-border;
     border-right: $grid-item-border;
-    cursor: pointer;
     float: left;
     height: $grid-item-height;
     overflow: hidden;
@@ -304,6 +312,7 @@
     height: 10em;
     margin-bottom: 1.2em;
 
+
   }
 
   .grid-item h1 {
@@ -321,6 +330,7 @@
   }
 
   .grid-item-big {
+    border-right:none;
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
