@@ -1,6 +1,6 @@
-class MenusController < ApplicationControllere
-def index
+class MenusController < ApplicationController
+  def index
 
-end
+  end
 
 end
