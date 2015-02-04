@@ -1,11 +1,14 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :show, :update, :destroy]
+  before_action :store_item, only: [:edit]
   def new
     @item = Item.new
     @catagory_index = Catagory.all
   end
+
   def index
     @items = Item.all
+    #load_my_select
     # @catagory_index = Catagory.all
   end
 
@@ -15,6 +18,7 @@ class ItemsController < ApplicationController
 
 
   def edit
+    session[item_params] = true
   end
 
   def create
@@ -49,6 +53,10 @@ class ItemsController < ApplicationController
       format.html { redirect_to items_path, notice: 'Food Item was successfully destroyed.' }
       #format.json { head :no_content }
     end
+  end
+
+  def store_item
+    session[:item_id] = params[:id]
   end
 
 

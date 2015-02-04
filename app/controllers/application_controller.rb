@@ -3,3 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 end
+
+
+def load_my_select
+  @meal_today = Item.find(session[:item_id])
+end
