@@ -201,7 +201,7 @@
   }
 
   .images-wrapper {
-    @include background(url('frolic.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
+    @include background(image-url('frolic.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
     background-color: $side-image-background-top;
     background-size: cover;
     border-bottom: $side-image-border;
@@ -211,7 +211,7 @@
 
 
     @include media($large-screen) {
-      @include span-columns(3);
+      @include span-columns(2);
       background-position: bottom;
       background-size: cover;
       border-right: $side-image-border;
