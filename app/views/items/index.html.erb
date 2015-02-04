@@ -18,10 +18,10 @@
       <td><%= item.name %> </td>
       <td><%= item.description %> </td>
       <td><%= item.price %> </td>
-      <td><%= link_to '<button type="button">Show</button>' .html_safe, item %></td>
       <td><%= link_to '<button type="button">Edit</button>' .html_safe, edit_item_path(item) %></td>
-      <td><%= link_to '<button type="button">Destroy</button>' .html_safe, item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
     <% end %>
   </tbody>
 </table>
+
+
+<td><%= link_to '<button type="button">New</button>' .html_safe, new_item_path %></td>
