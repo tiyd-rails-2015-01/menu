@@ -4,10 +4,16 @@
 
 An online menu for Cookiesplosion
 
-In a perfect world, this displays charming photos along with names, descriptions, and prices for each delicious cookie option.
+Click on the item names to edit the menu item.
 
-In *this* world, C is not just for cookie, it is also for the Crumbling ediface that is my Code
+On the edit screen, there are four (reasonably self explanatory) options at the end of the form:
+-  Update Item
 
-https://cookiesplosion.herokuapp.com/
+-  Delete this Item
 
-Also, heroku doesn't eat cookies. It eats my app. Alas.
+-  Back to Menu
+
+-  Create New Item
+
+The project is also available to view on Heroku:
+https://cookiesplosion.herokuapp.com/items
