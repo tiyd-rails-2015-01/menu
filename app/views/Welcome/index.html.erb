@@ -1,0 +1,21 @@
+<body bgcolor="#E6f6FA">
+  <h1><center>The Black Duck</center></h1>
+<center><%= image_tag "blackduck.jpg" %></center>
+<p><center><%= link_to 'Add a new Dish', new_item_path %><center></p>
+<% if @categories.length != nil %>
+  <% @categories.each do |category| %>
+    <h3><center><%=category.description%></center></h3>
+      <center><%= image_tag category.image %></center>
+    <table>
+      <tbody>
+        <% category.items.each do |item| %>
+          <tr>
+            <td><%= link_to item.name, edit_item_path(item.id) %></td>
+            <td><%= item.description %></td>
+            <td><%= number_to_currency(item.price) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+<% end %>
