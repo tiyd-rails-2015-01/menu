@@ -22,6 +22,7 @@
         <td><%= item.item_description %></td>
         <td><%= item.course.course_type %></td>
         <td><%= item.featured %></td>
+        <td><%= link_to 'Show', edit_item_path(item) %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
