@@ -5,10 +5,14 @@
 ## General Thoughts
 AAAARGGHH CSS!  
 Things I'm stuck on:  
--tried to shrink height of header a million ways; nothing worked
--can't get around the formatting of the "user agent stylesheet" on the button and dropdown on the forms
--the form formatting is pretty terrible in all directions, but passable...although I had to use break because calling margin-top or padding on that class did NOTHING
--refills provides soooo much code, I think there are unnecessary duplicates...or with some things, I compromised and changed a bigger category because I couldn't figure out how to target the smaller one.
+* tried to shrink height of header a million ways; nothing worked
+
+* can't get around the formatting of the "user agent stylesheet" on the button and dropdown on the forms
+
+* the form formatting is pretty terrible in all directions, but passable...although I had to use break because calling margin-top or padding on that class did NOTHING
+
+* refills provides soooo much code, I think there are unnecessary duplicates...or with some things, I compromised and changed a bigger category because I couldn't figure out how to target the smaller one.
+
 
 ## Description
 
