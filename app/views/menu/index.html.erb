@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1 id="menu-main">Menu</h1>
+
+<%@categories.each do |category|%>
+  <h1 class="categories"><%= category.name %></h1>
+  <%= image_tag category.item_image, class: "item_image" %>
+  <div class="flex-boxes">
+    <% category.items.each do |item| %>
+      <% featured = (rand(3) == 0) %>
+      <%= link_to edit_item_path(item), class: "flex-box" do %>
+        <img src="" alt="">
+        <h1 class="flex-title"><%= item.name %></h1>
+        <p><%= item.description %></p>
+        <p><%= item.price.round(2) %></p>
+      <% end %>
+    <%end%>
+  </div>
+<%end%>
+
+<div><%= link_to "Edit Menu Items", items_path %></div>
