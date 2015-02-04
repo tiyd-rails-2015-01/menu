@@ -59,6 +59,7 @@ html {
   font-weight: 400;
   padding: 0.75em 1.618em;
   text-decoration: none;
+  margin-bottom: 1px;
 }
 @media screen and (min-width: 40em) {
   /* line 37, /Users/Spoonflower/ironYard/menu/app/assets/stylesheets/welcome.scss */
