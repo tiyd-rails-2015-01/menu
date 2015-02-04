@@ -10,11 +10,11 @@
     </ul>
   </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :category_name %><br>
-    <%= f.select :category_name, options_for_select(["Appetizers", "Entrees", "Desserts", "Drinks"]), {include_blank: true} %><br>
+    <%= f.label :category_id %><br>
+    <%= f.collection_select(:category_id, Category.all, :id, :name)%>
   </div>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>

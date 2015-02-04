@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-   redirect_to edit_item_path(@item)
+   redirect_to items_path
   end
 
   def new
@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to @item, notice: 'Item was successfully created.'
+      redirect_to items_path, notice: 'Item was successfully created.'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to @item, notice: 'Item was successfully updated.'
+      redirect_to items_path, notice: 'Item was successfully updated.'
     else
       render :edit
     end
@@ -46,6 +46,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :description, :price)
+    params.require(:item).permit(:category_id, :category_name, :name, :description, :price)
   end
 end
