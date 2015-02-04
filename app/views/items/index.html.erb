@@ -16,7 +16,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= item.course.name %> <%= image_tag(item.course.image) %> </td>
+        <td><%= item.course.name %> <%= link_to image_tag(item.course.image), edit_item_path(item) %> </td>
         <td><%= item.name %></td>
         <td><%= item.price %></td>
         <td><%= item.description %></td>
