@@ -2,7 +2,7 @@
 
 <h1 id="menu-main">Menu</h1>
 
-<%@categories.order(:name).each do |category|%>
+<%@categories.each do |category|%>
   <h1 class="categories"><%= category.name %></h1>
   <%= image_tag category.item_image, class: "item_image" %>
   <div class="flex-boxes">
