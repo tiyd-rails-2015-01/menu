@@ -1,0 +1,33 @@
+
+  <%= form_for(@item) do |f|%>
+<br>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+</br>
+<br>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price, step: 0.01 %>
+  </div>
+</br>
+<br>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+</br>
+<br>
+  <div class="field">
+    <%= f.label :course_id %><br>
+    <!-- THIS IS HOW I GET THE ITEM.COURSE.NAME TO REFLECT THE COURSE TYPE -->
+    <%= f.collection_select :course_id, Course.all, :id, :name %>
+  </div>
+</br>
+<br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</br>
+<% end %>

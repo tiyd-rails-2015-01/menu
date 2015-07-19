@@ -1,0 +1,8 @@
+<h1>Editing Course</h1>
+
+<%= render 'form' %>
+
+
+<%= button_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' }, :method => "get" %>
+
+<%= button_to 'Home', root_path, :method => "get" %>
